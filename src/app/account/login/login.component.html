@@ -1,0 +1,59 @@
+<div class="login-container">
+  <div class="row" >
+    <div class="col-md-6 offset-md-3 col-sm-6 offset-sm-3 col-8 offset-2 col-lg-4 offset-lg-4">
+      <mat-card class="example-card">
+        <mat-card-content>
+          <div class="row">
+              <div class="col-md-8 offset-md-2 col-sm-8 offset-sm-2">
+                  <mat-card-header class="login-header-card">
+                      <mat-card-title>
+                            <img class="img-fluid" src='assets/images/idea_logo.jpeg'>
+                      </mat-card-title>
+                    </mat-card-header>
+              </div>
+          </div>
+          <form  [formGroup]="loginForm" (ngSubmit)="login()" class="example-form">
+              <table class="example-full-width" cellspacing="0">
+                <tr>
+                  <td>
+                    <mat-form-field class="example-full-width" [ngClass]="'align-' + textAlign">
+                      <input matInput placeholder="{{ 'login.placeholder.username' | translate:param }}" formControlName="username" name="username" required>
+                    </mat-form-field>
+                  </td>
+                </tr>
+                <tr>
+                <td>
+                  <mat-form-field class="example-full-width" [ngClass]="'align-' + textAlign">
+                   <input matInput placeholder="{{ 'login.placeholder.password' | translate:param }}" formControlName="password" type="password" name="password" required>
+                 </mat-form-field>
+              </td>
+              </tr>
+              <tr>
+                 <td>
+                    <mat-card-actions class="center">
+                        <button mat-raised-button class="button"  color="primary">{{ 'login.btn.text' | translate:param }}</button>
+                      </mat-card-actions>
+                 </td>
+              </tr>
+            </table>
+
+          </form>
+          <div class="row">
+              <div>
+                  <mat-slide-toggle
+                  (change)="onLangChange($event)"
+                  class="example-margin"
+                  [color]="color"
+                  [checked]="checked"
+                  [disabled]="disabled">
+                  {{ 'login.toggle.language' | translate:param }}
+              </mat-slide-toggle>
+              </div>
+            </div>
+          <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+        </mat-card-content>
+
+      </mat-card>
+    </div>
+  </div>
+</div>

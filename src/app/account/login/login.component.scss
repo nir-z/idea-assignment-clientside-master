@@ -1,0 +1,57 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+
+  .example-full-width
+  {
+      width: 100%;
+  }
+
+  .login-container
+  {
+      margin-top: 10%
+  }
+
+  .center{
+
+    text-align: center;
+  }
+
+  .button {
+    background-color: #0080FF;
+     /* Green */
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .login-header-card{
+
+    padding:20px;
+
+  }
+
+  .align-right{
+
+    text-align: right;
+
+  }
+
+  .align-left{
+
+    text-align: left;
+    
+  }
